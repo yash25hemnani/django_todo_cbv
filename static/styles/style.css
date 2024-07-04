@@ -1,0 +1,119 @@
+body {
+    background: black;
+    padding-top: 50px;
+}
+
+#container {
+    max-width: 550px;
+    margin: auto;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+#auth-button {
+    position: absolute;
+    top: 40%;
+    right: 5%;
+    align-items: center;
+}
+
+#auth-button button{
+    padding: 10px;
+    border: black solid 0.5px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+#title-form{
+    text-align: center;
+}
+
+#form-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#inside-div {
+    display: flex;
+    gap: 10px;
+}
+
+#input1{
+    padding: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: black solid 0.5px;
+}
+
+#input2{
+    padding: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: black solid 0.5px;
+    color: white;
+    font-weight: 600;
+    background-color: rgb(0, 0, 0);
+}
+
+#inside-div button{
+    padding: 5px;
+    border: black solid 0.5px;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+}
+
+#complete-incomplete{
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#complete-incomplete button{
+    padding: 2px;
+    border: black solid 0.5px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+#complete-incomplete button :hover{
+    cursor: pointer;
+}
+
+#complete{
+    width: 100%;
+    padding-bottom: 10px;
+    border: white solid 0.5px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: rgb(0, 0, 0);
+}
+
+#incomplete{
+    width: 100%;
+    padding-bottom: 10px;
+    border: white solid 0.5px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: rgb(0, 0, 0);
+}
+
+

@@ -1,0 +1,21 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+
+<style>
+    button {
+        padding: 10px;
+        border: black solid 0.5px;
+        color: white;
+        font-weight: 600;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+</style>
+
+<h1>Task: {{task}}</h1>
+<hr>
+<p>{{task.description}}</p>
+<a href="{% url 'tasks' %}"><button style="background-color: rgb(0, 0, 0); ;"><i class="ri-arrow-left-line">Go Back</i></button></a>
+
+{% endblock %}

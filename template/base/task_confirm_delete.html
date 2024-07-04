@@ -1,0 +1,29 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+
+<style>
+    input, button{
+        padding: 10px;
+        border: black solid 0.5px;
+        color: white;
+        font-weight: 600;
+        border-radius: 10px;
+        background-color: red;
+    }
+
+    input, button :hover{
+        cursor: pointer;
+    }
+</style>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <h3>Are you sure you want to delete - {{task}}?</h3>
+    <hr>
+    <input id="delete-button" type="submit" value="Delete">
+</form>
+<br>
+<a href="{% url 'tasks' %}"><button style="background-color: rgb(0, 0, 0);"><i class="ri-arrow-left-line">Go Back</i></button></a>
+
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+
+
+<style>
+    form {
+        display: flex; 
+        flex-direction: column; 
+        width: 100%;
+        height: 100%;
+        align-items: center;
+    }
+
+    form label {
+        margin-top: 5px;
+        margin-bottom: 3px;
+        font-weight: 600;
+    }
+
+    form input{
+        margin-bottom: 5px;
+        height: 20px;
+        width: 50%;
+    }
+
+    form input[type=submit], button{
+        margin-top: 5px;
+        background-color: black;
+        color: white;
+        width: 40%;
+        border-radius: 5px;
+        padding: 10px;
+        height: 40px;
+        cursor: pointer;
+    }
+</style>
+
+<h1>Task Form</h1>
+<hr>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <label for="">{{ form.title.label }}</label>
+    {{ form.title }}
+
+    <label for="">{{ form.description.label }}</label>
+    {{ form.description }}
+
+    <label for="">{{ form.complete.label }}</label>
+    {{ form.complete }}
+    
+    <input type="submit" value="Save Task">
+</form>
+<a href="{% url 'tasks' %}"><button style="width: 40%; cursor: pointer; margin-left: 50%; transform: translate(-50%, -10%);">Go Back</button></a>
+
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+
+<style>
+    form {
+        display: flex; 
+        flex-direction: column; 
+        width: 100%;
+        height: 100%;
+        align-items: center;
+    }
+
+    form label {
+        margin-top: 5px;
+        margin-bottom: 3px;
+        font-weight: 600;
+    }
+
+    form input{
+        margin-bottom: 5px;
+        height: 20px;
+        width: 50%;
+    }
+
+    form input[type=submit]{
+        margin-top: 5px;
+        background-color: black;
+        color: white;
+        width: 40%;
+        border-radius: 5px;
+        padding: 10px;
+        height: 40px;
+    }
+</style>
+
+<h1>Log In</h1>
+<hr>
+
+<form action="" method="post">
+    {% csrf_token %}
+    
+    <label for="">{{ form.username.label }}</label>
+    {{ form.username }}
+
+    <label for="">{{ form.password.label }}</label>
+    {{ form.password }}
+
+    <input type="submit" value="Log In">
+    
+    <p>Don't have a account? <a href="{% url 'register' %}">Register</a></p>
+</form>
+
+{% endblock %}
